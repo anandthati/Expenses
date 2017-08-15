@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+{% block homepage %}
+{% endblock %}
+{% block content %}
+<h2>Sign up</h2>
+<div class="col-md-12 col-md-offset-3" style="padding: 30px;">
+<div align="center" class="panel panel-signup">
+  <form method="post">
+    {% csrf_token %}
+    <span style="color: #f4511e;font-weight: 700; font-size: 20px;">Register</span>
+    {% for field in form %}
+      <p>
+        {% if "Username" in field.label_tag %}
+        <div class="col-md-6" style="text-align: right;">
+          <b>Email ID:</b>
+        </div>
+        <div class="col-md-6 form-group" style="text-align: left;">
+          {{ field }}
+        </div>
+        {% else %}
+        <div class="col-md-6" style="text-align: right;">
+          {{ field.label_tag }}
+        </div>
+        <div class="col-md-6 form-group" style="text-align: left;">
+          {{ field }}
+        </div>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button class="btn" style="background-color: #f4511e; color: #fff; margin-top: 20px;" type="submit">Sign up</button>
+  </form>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+*.pyc
+venv
+*~
+*.py#
+.#*
+.cache
+.coverage
+*egg-info
+\#*
+*.djhtml
+.DS_Store
+db.sqlite3
