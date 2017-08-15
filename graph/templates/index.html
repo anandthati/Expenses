@@ -49,6 +49,19 @@
       padding-right: 20px;
 
   }
+  .panel3{
+      width:36%;
+      height: 300px;
+      box-shadow: 10px 10px 5px #888888;
+  }
+  .panel-dashboard{
+      width:200px;
+      height: 600px;
+      background-color: #f4511e;
+      float: left;
+      box-shadow: 10px 10px 5px #888888;
+
+  }
   .jumbotron {
       background-color: #f4511e;
       color: #fff;
@@ -228,9 +241,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
         {% if request.user.is_anonymous %}
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
           <li><a href="{% url 'login' %}">Login</a></li>
           <li><a href="{% url 'signupform' %}">Register?</a></li>
         {% else %}

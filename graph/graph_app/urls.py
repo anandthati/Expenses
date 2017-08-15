@@ -10,4 +10,7 @@ urlpatterns = [
     url(r'^logout/$', logout,{'next_page':'index'}, name='logout'),
     url(r'^singup$', views.register, name='signupform'),
     url(r'^dashboard$', views.dashboard, name='dashboard'),
+    url(r'^summary$', views.summary, name='summary'),
+    url(r'^addexpense$', views.addexpense, name='addexpense'),
+    url(r'^addincome$', views.addincome, name='addincome'),
     ]

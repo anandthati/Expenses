@@ -7,3 +7,6 @@ runserver:
 
 collectstatic:
 	python graph/manage.py collectstatic --noinput
+
+migrate:
+	python graph/manage.py makemigrations --settings=graph.settings && python graph/manage.py migrate --settings=graph.settings

@@ -31,6 +31,7 @@ LOGIN_REDIRECT_URL='/dashboard'
 # Application definition
 
 INSTALLED_APPS = [
+    'graph_app.apps.GraphAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
