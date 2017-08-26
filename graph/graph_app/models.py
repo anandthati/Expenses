@@ -10,3 +10,8 @@ class AddExpenses(models.Model):
 	purpose = models.CharField(max_length=255,default='personal')
 	date = models.DateField(null=True, blank=True)
 
+class AddIncome(models.Model):
+	owner = models.ForeignKey(User, on_delete=models.CASCADE)
+	amount = models.BigIntegerField(default=0)
+	source = models.CharField(max_length=255,default='salary')
+	date = models.DateField(null=True, blank=True)

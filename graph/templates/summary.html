@@ -1,42 +1,14 @@
-{% extends 'index.html' %}
-{% block homepage %}
-{% endblock %}
-{% block content %}
-<style type="text/css">
-    ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 198px;
-    background-color: #f4511e;
-  }
-
-  li a {
-      display: block;
-      color: #000;
-      padding: 8px 16px;
-      text-decoration: none;
-  }
-
-  li a.active {
-      background-color: #949494;
-      color: black;
-  }
-
-  li a:hover:not(.active) {
-      background-color: #555;
-      color: white;
-  }
-</style>
-<div style="padding-top: 60px;">
-<div align="center" class="panel panel-dashboard" style="color: #fff;">
-<ul>
-  <li><a href="/summary">Account summary</a></li>
-  <li><a href="/addexpense">Expense</a></li>
-  <li><a href="/addincome">Income</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
+{% extends 'dashboard.html' %}
+{% block dashboard %}
+<div class="col-md-10" style="margin-top: 5%;">
+{% for i in expenses %}
+  {{i.amount}} | {{i.purpose}} | {{i.date}}
+  <br>
+{% endfor %}
+{% for i in income %}
+  {{i.amount}} | {{i.purpose}} | {{i.date}}
+  <br>
+{% endfor %}
 </div>
-{{foo}} -----------------
 </div>
 {% endblock %}

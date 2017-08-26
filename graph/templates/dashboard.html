@@ -28,14 +28,18 @@
       color: white;
   }
 </style>
-<div style="padding-top: 60px;">
+<div class="col-md-2" style="padding-top: 60px;margin-left: -15px;">
 <div align="center" class="panel panel-dashboard" style="color: #fff;">
 <ul>
   <li><a href="/summary">Account summary</a></li>
-  <li><a href="/addexpense" target="addexpense">Expense</a></li>
-  <li><a href="/addincome" target="addincome">Income</a></li>
+  <li><a href="/addexpense">Expense</a></li>
+  <li><a href="/addincome">Income</a></li>
   <li><a href="#about">About</a></li>
 </ul>
 </div>
+</div>
+{% block dashboard %}
+{% endblock %}
+<div>
 </div>
 {% endblock %}
